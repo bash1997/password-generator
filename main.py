@@ -16,7 +16,7 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 password =""
 
 for letter in range(0, nr_letters):
-	letter = random.randint(0, len(letters))
+	letter = random.randint(0, len(letters)) #or i could use the random.choice(letters) function
 	if letter == len(letters):
 		letter -= 1
 	password += letters[letter]
@@ -59,3 +59,23 @@ for number in range(0, nr_numbers):
 
 mix_password = "".join(random.sample(password,len(password)))
 print(f"Or here is a randomised password: {mix_password}")
+
+
+## if i used the random.shuffle, password would need to be a list then use the shuffle func then pass each character into a new variable
+# password_list = []
+
+# for char in range(1, nr_letters + 1):
+# 	password_list += random.choice(letters)
+# for char in range(1, nr_symbols + 1):
+# 	password_list += random.choice(symbols)
+# for char in range(1, nr_numbers + 1):
+# 	password_list += random.choice(numbers)
+# print(password_list)
+
+# random.shuffle(password_list)
+# print(password_list)
+
+# password = ""
+# for char in password_list:
+# 	password += char
+# print(password)
